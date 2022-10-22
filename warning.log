@@ -3208,3 +3208,115 @@ Not Found: /accounts
 Not Found: /accounts/profile/
 Not Found: /accounts/profile/
 Not Found: /accounts/
+Not Found: /favicon.ico
+Internal Server Error: /chat/api/user_room/
+Traceback (most recent call last):
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/views.py", line 137, in list
+    response = super(UserRoomApiView, self).list(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/serializerrs.py", line 202, in to_representation
+    rep['participants'] = self.check_participants_blocked(rep['participants'])
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/serializerrs.py", line 194, in check_participants_blocked
+    if item.id in blocked_to_users:
+AttributeError: 'collections.OrderedDict' object has no attribute 'id'
+Internal Server Error: /chat/api/user_room/
+Traceback (most recent call last):
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/views.py", line 137, in list
+    response = super(UserRoomApiView, self).list(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/serializerrs.py", line 210, in to_representation
+    rep['participants'] = self.check_participants_blocked(rep['participants'])
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/serializerrs.py", line 195, in check_participants_blocked
+    for key, item in participants:
+ValueError: too many values to unpack (expected 2)
+Internal Server Error: /chat/api/user_room/
+Traceback (most recent call last):
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/views.py", line 137, in list
+    response = super(UserRoomApiView, self).list(request, *args, **kwargs)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ashkan/Desktop/Projects/lovinoo/.venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/serializerrs.py", line 210, in to_representation
+    rep['participants'] = self.check_participants_blocked(rep['participants'])
+  File "/home/ashkan/Desktop/Projects/lovinoo/chat/api/serializerrs.py", line 195, in check_participants_blocked
+    for key, item in participants.items():
+AttributeError: 'list' object has no attribute 'items'
