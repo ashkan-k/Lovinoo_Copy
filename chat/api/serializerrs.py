@@ -179,9 +179,17 @@ class UserRoomSerializer(serializers.ModelSerializer):
         return last_message.body
 
     def get_partner_info(self, obj):
+        blocked_me_users = Block.objects.filter(to_user=self.context['request'].user)\
+            .values_list('from_user_id', flat=True)
+
         for user_obj in obj.participants.all():
             if user_obj.id != self.context['request'].user.id:
-                return ProfileMainSerializer(user_obj.profile, many=False).data
+                data = ProfileMainSerializer(many=False).to_representation(user_obj.profile)
+                if user_obj.id in blocked_me_users:
+                    data['is_blocked'] = True
+                else:
+                    data['is_blocked'] = False
+                return data
 
     def get_unread_message(self, obj):
         user = self.context['request'].user
